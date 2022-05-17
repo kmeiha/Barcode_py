@@ -175,9 +175,11 @@ filemenu.add_separator()
 filemenu.add_command(label="Exit", command=root.quit)
 menubar.add_cascade(label="File", menu=filemenu)
 #################################################################
+def about():
+    os.startfile('about.pyw')
 helpmenu = Menu(menubar, tearoff=0)
 helpmenu.add_command(label="Help", command=donothing)
-helpmenu.add_command(label="About", command=donothing)
+helpmenu.add_command(label="About", command=lambda: about())
 menubar.add_cascade(label="Help", menu=helpmenu)
 root.config(menu=menubar)
 #################################################################
